@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator </title>
+</head>
+<style type="text/css">
+	.bd
+	{
+		background-image: url(https://tse4.mm.bing.net/th?id=OIP.5iIcLlOUGTb3L9L-hzxNUQHaEc&pid=Api&P=0&h=180);
+		background-size: cover;
+	}
+	h1{
+		border:4px solid red;
+		border-radius: 10px;
+		color: lavender;
+		text-align: center;
+		width: 200px;
+		margin: 3%;
+		
+
+
+	}
+	h1:hover{
+		transform: scale(1.5);
+		box-shadow: 0px 0px 7px red;
+
+	}
+	.calc{
+		background-color: white;
+		height: 450px;
+		width: 245px;
+		margin: 3% 38%;
+		border-radius: 30px;
+		padding: 20px;
+		border: 5px solid skyblue;
+
+	}
+
+	input{
+		width: 50px;
+		height: 50px;
+		background-color: gray;
+		color: white;
+		border: none;
+		border-radius: 15px;
+		margin: 4px;
+		font-weight: bolder;
+		transition-duration: 0.4s;
+		font-size: 20px;
+		
+	}
+	#dk{
+		background-color: black;
+	}
+	.operator{
+		background-color: ;lor: orange;
+	}
+	.ac{
+		width: 113px;
+	}
+	.op{
+		height: 80px;
+		width: 230px;
+		background-color: transparent;
+		text-align: right;
+		font-size: 33px;
+		color: white;
+	}
+	#all{
+		background-color: darkgray;
+	}
+	#c{
+		background-color:darkgray ;
+	}
+	.operator:hover;
+	{
+		transform: scale(0.9);
+	}
+	input[type="button"]:hover
+	{
+		transform:scale(0.9);
+		box-shadow: 4px 3px 5px red;
+
+	}
+</style>
+<body class = "bd">
+	<center><h1>Calculator</h1></center>
+	<div class="calc" id="dk">
+		<form>
+			<div>
+				<input disabled type="text" name="op"  class="op">
+			</div>
+			<hr>
+			<div>
+				<input type="button" value="AC" onclick="op.value=''" class="ac" id="all">
+				<input type="button" value="C" onclick="op.value=clea(op.value)" class="operator" id="c">
+				<input type="button" value="%" onclick="op.value+='%'" class="operator">
+				
+			</div>
+			<div>
+				<input type="button" value="7" onclick="op.value+='7'">
+				<input type="button" value="8" onclick="op.value+='8'">
+				<input type="button" value="9" onclick="op.value+='9'">
+				<input type="button" value="+" onclick="op.value+='+'"class="operator">
+			</div>
+			<div>
+				<input type="button" value="4" onclick="op.value+='4'">
+				<input type="button" value="5" onclick="op.value+='5'">
+				<input type="button" value="6" onclick="op.value+='6'">
+				<input type="button" value="-" onclick="op.value+='-'"class="operator">
+			</div>
+			<div>
+				<input type="button" value="1" onclick="op.value+='1'">
+				<input type="button" value="2" onclick="op.value+='2'">
+				<input type="button" value="3" onclick="op.value+='3'">
+				<input type="button" value="x" onclick="op.value+='x'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="." onclick="op.value+='.'">
+				<input type="button" value="0" onclick="op.value+='0'">
+				<input type="button" value="=" onclick="op.value=eval(op.value)">
+				<input type="button" value="/" onclick="op.value+='/'" class="operator">
+			</div>
+			<div>
+				<input type="button" value="Darkmod" onclick="calc.dk" class="dk">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function clea(a)
+		{
+	   
+		let b = a.split('');
+		
+		b.pop();
+		
+		let c =b.join('');
+		
+		return c;
+		}
+
+	</script>
+
+</body>
+</html>
